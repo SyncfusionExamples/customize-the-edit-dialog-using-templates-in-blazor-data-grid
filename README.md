@@ -1,1 +1,1 @@
-# customize-the-edit-dialog-using-templates-in-blazor-data-grid
+A quick-start project that helps you to customize the edit dialog in Syncfusion Blazor Data Grid. This project contains simple code customizations to add custom components like Numeric TextBox, AutoComplete, DatePicker, Dropdown List, and TextBox to the edit dialog using a template.
