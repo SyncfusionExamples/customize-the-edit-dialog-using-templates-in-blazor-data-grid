@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CustomizingEditDialog</title>
+    <base href="/" />
+    <link href="_framework/dotnet.2rnigc279w.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-vuhxYDxpHYcpftsfpo6DOtMyyTiciJIUbSi/5yrr+1o=" />
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+    <link href="CustomizingEditDialog.styles.css" rel="stylesheet" />
+    <script type="importmap">{
+  "imports": {
+    "./_framework/Microsoft.DotNet.HotReload.WebAssembly.Browser.lib.module.js": "./_framework/Microsoft.DotNet.HotReload.WebAssembly.Browser.vdkv1jewps.lib.module.js",
+    "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.w3qd1tpl0e.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.2rnigc279w.js",
+    "./_framework/dotnet.native.js": "./_framework/dotnet.native.b6l13xorvf.js",
+    "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.v06hirbjsv.js",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.js": "./lib/bootstrap/dist/js/bootstrap.bundle.ajorrr4f44.js",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.min.js": "./lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js",
+    "./lib/bootstrap/dist/js/bootstrap.esm.js": "./lib/bootstrap/dist/js/bootstrap.esm.0nkj9seys8.js",
+    "./lib/bootstrap/dist/js/bootstrap.esm.min.js": "./lib/bootstrap/dist/js/bootstrap.esm.min.jj8uyg4cgr.js",
+    "./lib/bootstrap/dist/js/bootstrap.min.js": "./lib/bootstrap/dist/js/bootstrap.min.63fj8s7r0e.js",
+    "./lib/bootstrap/dist/js/bootstrap.js": "./lib/bootstrap/dist/js/bootstrap.vsu3jsqmrx.js"
+  },
+  "scopes": {},
+  "integrity": {
+    "./_content/Syncfusion.Blazor.Buttons/scripts/sf-floating-action-button.min.js": "sha256-m1Bd7qvHvj0ffYMwqzusaSxeGucKV7RobWTtCoMi3iA=",
+    "./_content/Syncfusion.Blazor.Buttons/scripts/sf-speeddial.min.js": "sha256-FLi7x0U3xXzH44udFyR9HYQZ+wIB1hU9SsMKhxVIkVs=",
+    "./_content/Syncfusion.Blazor.Calendars/scripts/sf-calendar.min.js": "sha256-5afozEwNczRsD/osnBg5vd6XmofBOTH7rzBdXXLvBPY=",
+    "./_content/Syncfusion.Blazor.Calendars/scripts/sf-datepicker.min.js": "sha256-5v3pR+BAOVYdbYwW1fS67OKK6ZbgHe31lR+36orYCtI=",
+    "./_content/Syncfusion.Blazor.Calendars/scripts/sf-daterangepicker.min.js": "sha256-cop28oa4NO49Hv5c2CTi638s9FsMT/jLXJjbBJtgKmo=",
+    "./_content/Syncfusion.Blazor.Calendars/scripts/sf-timepicker.min.js": "sha256-CnPn7cXv1whd4H1dSh6V7ucYIysm9a867zWpAFkLO+Y=",
+    "./_content/Syncfusion.Blazor.Core/scripts/compression.min.js": "sha256-7nR+V48fAQaHyo3shc0buKyu325dnOZmEI8MttCFbok=",
+    "./_content/Syncfusion.Blazor.Core/scripts/excelexport.min.js": "sha256-Ou1Iqf7Pvq7XOjy3EEawgw/cP/nvKwyIN1wv0rIDvKw=",
+    "./_content/Syncfusion.Blazor.Core/scripts/fileutils.min.js": "sha256-QqfwsFdw89vhejEOUxpZ5VTDT0aYs/NaDoTzOnnpWv8=",
+    "./_content/Syncfusion.Blazor.Core/scripts/pdfexport.min.js": "sha256-hzJHymCN6ZJ6xF+NqIBoN2iwVrYBDBG5YIq3vPhcyoU=",
+    "./_content/Syncfusion.Blazor.Core/scripts/popup.min.js": "sha256-WCQFFt+CRw591diQQ4JxiiIAoVCJK/BGGc+LrYXdO4U=",
+    "./_content/Syncfusion.Blazor.Core/scripts/popupsbase.min.js": "sha256-Qzf50qRKzuPEakB3FSx7zoyVvmNxfNZEAO4uTlhkAGA=",
+    "./_content/Syncfusion.Blazor.Core/scripts/sf-svg-export.min.js": "sha256-nSTqNH2AnpoDS1JQFMBdNDzM3aMlyhQAAm0I6Bbqpxw=",
+    "./_content/Syncfusion.Blazor.Core/scripts/svgbase.min.js": "sha256-GJL+W+INwAZYhN7a8nffYneT1D+2fq++WnC2GxqKBgY=",
+    "./_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor-base.min.js": "sha256-ILgTGumC2G8eUaHyHHlZMGzTVHWMq8LQQMYjp75mnYo=",
+    "./_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor-extended.min.js": "sha256-8sN8ZsCAYrkKW9VESvuXMEiZNKoOtxsvcqxc/GLAnCw=",
+    "./_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js": "sha256-sveV7ed5c/7Pgw70y/w6rKQGEN8epeiFYm4enVX1QCs=",
+    "./_content/Syncfusion.Blazor.Data/scripts/data.min.js": "sha256-JD38yLpZK1p2nymnk9GKlym9yIqk+34dgz5mJkTtJZ8=",
+    "./_content/Syncfusion.Blazor.DropDowns/scripts/sf-dropdownlist.min.js": "sha256-jo8kOfaJPgzc3LXaAcTb46lrWVxCX00xvUSPinRodBA=",
+    "./_content/Syncfusion.Blazor.DropDowns/scripts/sf-listbox.min.js": "sha256-b1Ehmklk/X+QRExbfNXlf8SPTCTOFW+uuP+IwgHMW8w=",
+    "./_content/Syncfusion.Blazor.DropDowns/scripts/sf-mention.min.js": "sha256-6Hdvdzb9jF0Hn95nbobc9y3LUC0B+QIlfjvOJjh2wjs=",
+    "./_content/Syncfusion.Blazor.DropDowns/scripts/sf-multiselect.min.js": "sha256-LuXOUMv5frD5aeeJezwksrasbsvZvaZxL8psOdWlGgg=",
+    "./_content/Syncfusion.Blazor.DropDowns/scripts/sortable.min.js": "sha256-xqwdKDqSP7eXDa+jV7xtr9XL1vdHpP2H5bsGtwU4bCY=",
+    "./_content/Syncfusion.Blazor.Grid/scripts/sf-grid.min.js": "sha256-eD5N6ZqOBDN4yxGfN1MgmCcKmdtwyPLZtuexkNsrd5g=",
+    "./_content/Syncfusion.Blazor.Inputs/scripts/sf-colorpicker.min.js": "sha256-cs7MsONLFyg8IHm2h7oIgvHrf1qnpX2JsvpgOCTCSHE=",
+    "./_content/Syncfusion.Blazor.Inputs/scripts/sf-maskedtextbox.min.js": "sha256-DpsdAH7cmhDEtuMK2cUHj2fRtVukJco0JY3aB4kdFpQ=",
+    "./_content/Syncfusion.Blazor.Inputs/scripts/sf-numerictextbox.min.js": "sha256-neXkzHUKIL2BKRPOROxKmGUnhDixP9SreTDeOIfTR1Q=",
+    "./_content/Syncfusion.Blazor.Inputs/scripts/sf-rating.min.js": "sha256-qQSMZyH4WQrJiVeFMZlJ4Y3E6BGsqRvof6QfThL2zBE=",
+    "./_content/Syncfusion.Blazor.Inputs/scripts/sf-signature.min.js": "sha256-Nt7MPhYYKNVK8pDeEhnnaQxatZxKVBLOkmijKADzve4=",
+    "./_content/Syncfusion.Blazor.Inputs/scripts/sf-slider.min.js": "sha256-/g04H68908GlTEz4SHJH/tP0sKyxLNmdYCtgsOnDJhs=",
+    "./_content/Syncfusion.Blazor.Inputs/scripts/sf-textbox.min.js": "sha256-dF4Z6vfqXsONEUbljdN+Z9KDt05LWmnMFX9Me+81dQw=",
+    "./_content/Syncfusion.Blazor.Inputs/scripts/sf-uploader.min.js": "sha256-bxjrg0rOE/vrbuXOFMZpMeVQr0fSJl2y6cJ7XhLvrtc=",
+    "./_content/Syncfusion.Blazor.Lists/scripts/sf-listview.min.js": "sha256-Ym1xnlt1cg53rUvN7a4y5ruKUZAWwUgCCdgygFtAPJ4=",
+    "./_content/Syncfusion.Blazor.Navigations/scripts/navigationsbase.min.js": "sha256-pISpDHGQg3SM+Z0N8/9UMqAMpuE4lZfDD+6XOOtJGf8=",
+    "./_content/Syncfusion.Blazor.Navigations/scripts/sf-accordion.min.js": "sha256-wNgcXOkyWyeqNeja2+f1RZI/byq63vKKCGNOc/Uo6PY=",
+    "./_content/Syncfusion.Blazor.Navigations/scripts/sf-breadcrumb.min.js": "sha256-h/YYUkHTHJz0gVEyqFB899UEcs7QpDh1FwuSqnQ79Gg=",
+    "./_content/Syncfusion.Blazor.Navigations/scripts/sf-carousel.min.js": "sha256-gabHUTNiL3vTbyyt+yUTgDprYBuRxucLLsm40jfRuCg=",
+    "./_content/Syncfusion.Blazor.Navigations/scripts/sf-contextmenu.min.js": "sha256-3T0yRhBi7qUQNyEQA8D9fiuqma0vRW1fAsqhJNpyKZI=",
+    "./_content/Syncfusion.Blazor.Navigations/scripts/sf-menu.min.js": "sha256-nVeydyTescukLyCaznK5UjaFM2QOWC9EUbGZf2F7k0I=",
+    "./_content/Syncfusion.Blazor.Navigations/scripts/sf-pager.min.js": "sha256-CRcDqmwMJhLmEuWr1wIzpKhyQRUj/Q0f6ipUly+Uivg=",
+    "./_content/Syncfusion.Blazor.Navigations/scripts/sf-sidebar.min.js": "sha256-btBh5cZNg+k4NcfuIC9/Up78p+oHxGLJMj7M6td79kI=",
+    "./_content/Syncfusion.Blazor.Navigations/scripts/sf-tab.min.js": "sha256-z5rSnYB6DnNwKr1I0iC9xq6DSpPl/q+p8IFM7EcqHiI=",
+    "./_content/Syncfusion.Blazor.Navigations/scripts/sf-toolbar.min.js": "sha256-W2Cd+wToDNuhYrZqr3Nphk4K8fH1GVq/qlcf4EeDjhA=",
+    "./_content/Syncfusion.Blazor.Navigations/scripts/sf-treeview.min.js": "sha256-pVc07n9NiQCyg6OMasylLYx6rCFluWN+TzFnLGK466o=",
+    "./_content/Syncfusion.Blazor.Notifications/scripts/sf-toast.min.js": "sha256-KJbhYkbhDwqIyC0u1cd8LocdcAURZVLAAuv7RORd84w=",
+    "./_content/Syncfusion.Blazor.Popups/scripts/sf-dialog.min.js": "sha256-kel4qQKarDadA9ZaZ8OOo5b4stjLo1y/UjhRnljcmGQ=",
+    "./_content/Syncfusion.Blazor.Popups/scripts/sf-tooltip.min.js": "sha256-UmDKeeAmEOC1/lWJKAkGMwAvaoIOttqY/QdRrlUq5ZY=",
+    "./_content/Syncfusion.Blazor.Spinner/scripts/sf-spinner.min.js": "sha256-FMHjIrIXIMq/t5/S4wiZojjAkdKuPMm/RklZT/SMgV0=",
+    "./_content/Syncfusion.Blazor.Spinner/scripts/spinner.min.js": "sha256-gpvXIg+HEN6n/S390NpuEM7SmTLlUORX4SeBfsJmtBU=",
+    "./_content/Syncfusion.Blazor.SplitButtons/scripts/sf-drop-down-button.min.js": "sha256-6VPBl8+sxXgzyRMDGoDiGQtFxrQYl2Q06PFHd0e7Ubg=",
+    "./_content/Syncfusion.Blazor.SplitButtons/scripts/splitbuttonsbase.min.js": "sha256-D4ASk6L2bLb14oVm6WKk9AI6tUG0qNGoR/Vn/zs3+5U=",
+    "./_framework/Microsoft.DotNet.HotReload.WebAssembly.Browser.lib.module.js": "sha256-8yWuHq7n8AYAqkjYlne8u6Jx371cqsaCnga8ZVQ/Qc4=",
+    "./_framework/Microsoft.DotNet.HotReload.WebAssembly.Browser.vdkv1jewps.lib.module.js": "sha256-8yWuHq7n8AYAqkjYlne8u6Jx371cqsaCnga8ZVQ/Qc4=",
+    "./_framework/blazor.webassembly.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
+    "./_framework/blazor.webassembly.w3qd1tpl0e.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
+    "./_framework/dotnet.2rnigc279w.js": "sha256-vuhxYDxpHYcpftsfpo6DOtMyyTiciJIUbSi/5yrr+1o=",
+    "./_framework/dotnet.js": "sha256-vuhxYDxpHYcpftsfpo6DOtMyyTiciJIUbSi/5yrr+1o=",
+    "./_framework/dotnet.native.b6l13xorvf.js": "sha256-jZddobLBM2C3lQhYQ61xSQJ/WqD3eQCO3RzoHGaOjx0=",
+    "./_framework/dotnet.native.js": "sha256-jZddobLBM2C3lQhYQ61xSQJ/WqD3eQCO3RzoHGaOjx0=",
+    "./_framework/dotnet.runtime.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds=",
+    "./_framework/dotnet.runtime.v06hirbjsv.js": "sha256-QbnqrZGHtGq7wudS17/AYEPpH9JkphrsyVllD6JHmds=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.ajorrr4f44.js": "sha256-9vv812jkg8l64rc7YAeu4PmLMMjQz9dg3WRcraEKqWA=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.js": "sha256-9vv812jkg8l64rc7YAeu4PmLMMjQz9dg3WRcraEKqWA=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js": "sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=",
+    "./lib/bootstrap/dist/js/bootstrap.bundle.min.js": "sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.0nkj9seys8.js": "sha256-xBe+imjnjcuz6hQ2buQRmKwN0hPRhehlnrAuwZLvCMs=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.js": "sha256-xBe+imjnjcuz6hQ2buQRmKwN0hPRhehlnrAuwZLvCMs=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.min.jj8uyg4cgr.js": "sha256-QZdFT1ZNdly4rmgUBtXmXFS9BU1FTa+sPe6h794sFRQ=",
+    "./lib/bootstrap/dist/js/bootstrap.esm.min.js": "sha256-QZdFT1ZNdly4rmgUBtXmXFS9BU1FTa+sPe6h794sFRQ=",
+    "./lib/bootstrap/dist/js/bootstrap.js": "sha256-r8ETjL9y3wYyOxN3AVe4oDV7AKurHBOfJyl2frCdH74=",
+    "./lib/bootstrap/dist/js/bootstrap.min.63fj8s7r0e.js": "sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=",
+    "./lib/bootstrap/dist/js/bootstrap.min.js": "sha256-3gQJhtmj7YnV1fmtbVcnAV6eI4ws0Tr48bVZCThtCGQ=",
+    "./lib/bootstrap/dist/js/bootstrap.vsu3jsqmrx.js": "sha256-r8ETjL9y3wYyOxN3AVe4oDV7AKurHBOfJyl2frCdH74="
+  }
+}</script>
+</head>
+
+<body>
+    <div id="app">
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="." class="reload">Reload</a>
+        <span class="dismiss">🗙</span>
+    </div>
+    <script src="_framework/blazor.webassembly.w3qd1tpl0e.js"></script>
+</body>
+
+</html>

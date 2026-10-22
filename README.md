@@ -20,36 +20,37 @@ This sample demonstrates how to customize the edit dialog of the Syncfusion [Bla
 ## Prerequisites
 
 - Visual Studio 2022 or Visual Studio Code
-- .NET SDK compatible with the project's target framework
+- .NET 10.0 SDK
 
 ## How to Run the Project
 
 **Visual Studio 2022**
 
 1. Clone or download the repository.
-2. Open the solution file `CustomizingEditDialog.sln`.
+2. Open the project file `CustomizingEditDialog.csproj`.
 3. Restore all NuGet packages.
-4. Set the `Server` project as the startup project if required.
-5. Build the solution.
-6. Run the application using `Ctrl+F5`.
+4. Build and run the application using `Ctrl+F5`.
 
 **Visual Studio Code**
 
 1. Open the repository folder in Visual Studio Code.
 2. Open the integrated terminal.
-3. Navigate to the Server project directory.
 
 ```bash
-cd Server
 dotnet restore
 dotnet run
 ```
 
-4. Open the local URL displayed in the terminal after the application starts.
+3. Open the local URL displayed in the terminal after the application starts.
 
-## Project Structure
+## Project Structure (.NET 10 standalone Blazor WebAssembly)
 
-- `Client/Pages/Index.razor` — contains the DataGrid implementation, dialog template configuration, custom editor components, sample order data, `OrderDetails` model, and `OnActionBeginHandler` logic.
+- `CustomizingEditDialog.csproj` — the Blazor WebAssembly app project (`net10.0`).
+- `Program.cs` — app entry point; registers Syncfusion Blazor services.
+- `App.razor` / `_Imports.razor` — root component and global using directives.
+- `Layout/` — `MainLayout.razor` and `NavMenu.razor` shared layouts.
+- `Pages/Index.razor` — contains the DataGrid implementation, dialog template configuration, custom editor components, sample order data, `OrderDetails` model, and `OnActionBeginHandler` logic.
+- `wwwroot/index.html` — hosts the app and references the Syncfusion theme and scripts.
 
 ## Support and Feedback
 
